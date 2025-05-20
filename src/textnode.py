@@ -1,6 +1,6 @@
 from enum import Enum
 
-class TextNodeType(Enum):
+class TextType(Enum):
     NORMAL = "Normal text"
     BOLD = "**Bold text**"
     ITALIC = "_Italic text_"
@@ -10,16 +10,17 @@ class TextNodeType(Enum):
 
 
 class TextNode:
-    def __init__(self, text:str, text_type:TextNodeType, url:str):
+    def __init__(self, text:str, text_type:TextType, url:str=None):
 
         self.text = text
         self.text_type = text_type
         self.url = url
 
     def __eq__(self, other):
-        if(self.text == self.text_type):
-            if (self.text == self.url):
-                return (True)
+        if(self.text == other.text):
+            if (self.url == other.url):
+                if(self.text_type.value == other.text_type.value):
+                    return (True)
         return False
 
     def __repr__(self):

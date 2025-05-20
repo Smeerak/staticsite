@@ -1,10 +1,10 @@
 #imports
-from textnode import TextNodeType
+from textnode import TextType
 from textnode import TextNode
 
 #main func
 def main():
-    test = TextNode("This is anchor text", TextNodeType.LINKS , "https://www.boot.dev")
+    test = TextNode("This is anchor text", TextType.LINKS , "https://www.boot.dev")
     print(str(test))
 
 #main execution guard
