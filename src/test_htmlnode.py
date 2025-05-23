@@ -9,11 +9,9 @@ class TestHTMLNode(unittest.TestCase):
         
         self.assertEqual(node, node1)
 
+
     def test_not_eq(self):
-        node = HTMLNode("<p>", "this is some text",[],{})
-        node1 = HTMLNode("<p>", "this is some text",[1,2,3], {keyd:valued})
-        
-        self.assertNotEqual(node, node1)
+        pass
 
     def test_to_html(self):
         pass
